@@ -12,6 +12,9 @@ SELECT AVG(length) FROM film;
 SELECT ROUND(AVG(length),0) FROM film;
 SELECT FLOOR(AVG(length)) FROM film;
 
+SELECT FLOOR(AVG(length) / 60) AS hours, ROUND(AVG(length) % 60) AS minutes
+FROM film;
+
 SELECT * FROM rental;
 
 SELECT DATEDIFF(MIN(rental_date), MAX(rental_date)) FROM rental;
